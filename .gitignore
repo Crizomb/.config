@@ -5,4 +5,5 @@
 !ghostty/
 !ghostty/**
 
-# (Optional) Add placeholder files if folders are empty
+!nvim
+!nvim/**
