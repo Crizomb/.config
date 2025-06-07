@@ -2,8 +2,8 @@
 *
 # Included files
 !gitignore
-!ghostty/**
-!nvim/**
-!godot/**
-!nautilus/**
-!blender/**
+!ghostty
+!nvim
+!godot
+!nautilus
+!blender
