@@ -17,7 +17,7 @@ const float diagonaleBand = 0.4f;
 void mainImage(out vec4 O, in vec2 F)
 {
     vec2 uv = F.xy / iResolution.xy;
-    vec4 col = vec4(0.5);
+    vec4 col = vec4(0.0);
     float a = max(iResolution.y / iResolution.x, 1.0);
     // Avoid useless calcul for performance
     if (uv.x < uv.y + diagonaleBand * a && uv.x > uv.y - diagonaleBand * a) {
