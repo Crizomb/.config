@@ -1,9 +1,8 @@
-# Ignore everything by default (sensitive informations sometimes in .files)
 *
-# Included files
-!gitignore
-!ghostty
-!nvim
-!godot
-!nautilus
-!blender
+!.gitignore
+
+# Allow the directory and everything inside
+!ghostty/
+!ghostty/**
+
+# (Optional) Add placeholder files if folders are empty
