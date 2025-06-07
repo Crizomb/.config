@@ -12,14 +12,15 @@
 
 #define BLACK_BLEND_THRESHOLD .4 // This is controls the dim of the screen
 const float timeMultiplier = 0.1f;
-const float diagonaleBand = 0.35f;
+const float diagonaleBand = 0.4f;
 
 void mainImage(out vec4 O, in vec2 F)
 {
     vec2 uv = F.xy / iResolution.xy;
-    vec4 col = vec4(0.0);
+    vec4 col = vec4(0.5);
+    float a = max(iResolution.y / iResolution.x, 1.0);
     // Avoid useless calcul for performance
-    if (uv.x < uv.y + diagonaleBand && uv.x > uv.y - diagonaleBand) {
+    if (uv.x < uv.y + diagonaleBand * a && uv.x > uv.y - diagonaleBand * a) {
         //Iterator and attenuation (distance-squared)
         float i = .2, a;
         //Resolution for scaling and centering
