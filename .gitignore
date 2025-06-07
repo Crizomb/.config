@@ -1,9 +1,9 @@
 # Ignore everything by default (sensitive informations sometimes in .files)
 *
 # Included files
-!.gitignore
-!.ghostty/**
-!.nvim/**
-!.godot/**
-!.nautilus/**
-!.blender/**
+!gitignore
+!ghostty/**
+!nvim/**
+!godot/**
+!nautilus/**
+!blender/**
