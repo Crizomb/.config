@@ -58,9 +58,13 @@
 
 # bettercrt, cubes, inside-the-matrix, just-snow (laggy), underwater, galaxy, cineShader-Lava, gears-and-belts, starfield-colors
 
+# DO  NOT FORGET ctrl + shift + ,
+
 custom-shader = ghostty-shaders/singularity.glsl
 # custom-shader = ghostty-shaders/synthwave.glsl
 # custom-shader = ghostty-shaders/ui-noise-halo.glsl
 # custom-shader = ghostty-shaders/cineShader-Lava.glsl
 
 theme = carbonfox
+gtk-tabs-location = hidden
+# gtk-opengl-debug = true
