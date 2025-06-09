@@ -11,7 +11,7 @@
 */
 
 #define BLACK_BLEND_THRESHOLD .4 // This is controls the dim of the screen
-const float timeMultiplier = 0.1f;
+const float timeMultiplier = 0.6f;
 const float diagonaleBand = 0.4f;
 
 void mainImage(out vec4 O, in vec2 F)
@@ -34,14 +34,14 @@ void mainImage(out vec4 O, in vec2 F)
         //Rotate and apply perspective
         c = p * mat2(1, 1, d / (.1 + i / dot(b, b))),
         //Rotate into spiraling coordinates
-        v = c * mat2(cos(.5 * log(a = dot(c, c)) + iTime * i + vec4(0, 33, 11, 0))) / i,
+        v = c * mat2(cos(.5 * log(a = dot(c, c)) + iTime * i * timeMultiplier + vec4(0, 33, 11, 0))) / i,
         //Waves cumulative total for coloring
         w;
 
         //Loop through waves
         for (; i++ < 9.; w += 1. + sin(v))
             //Distort coordinates
-            v += .7 * sin(v.yx * i + iTime) / i + .5;
+            v += .7 * sin(v.yx * i + iTime * timeMultiplier) / i + .5;
         //Acretion disk radius
         i = length(sin(v / .3) * .4 + c * (3. + d));
         //Red/blue gradient

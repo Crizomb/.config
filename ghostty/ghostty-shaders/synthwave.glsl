@@ -6,9 +6,9 @@
 //#define THAT_CRT_FEELING
 
 #define BLACK_BLEND_THRESHOLD .4 // This is controls the dim of the screen
-const float timeMultiplier = 0.1f;
+const float timeMultiplier = 0.3f;
 
-#define TIME        iTime
+#define TIME        iTime*timeMultiplier
 #define RESOLUTION  iResolution
 #define PI          3.141592654
 #define PI_2        (0.5*PI)
@@ -575,7 +575,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec4 terminalColor = texture(iChannel0, termUV);
 
     float alpha = step(length(terminalColor.rgb), BLACK_BLEND_THRESHOLD);
-    vec3 blendedColor = mix(terminalColor.rgb * 1.0, col.rgb * 0.3, alpha);
+    vec3 blendedColor = mix(terminalColor.rgb * 1.0, col.rgb * 0.2, alpha);
 
     fragColor = vec4(blendedColor, terminalColor.a);
 }

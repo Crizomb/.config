@@ -55,16 +55,27 @@
 # clocks.glsl
 # singularity.glsl
 # synthwave.glsl
+# iso-city.glsl
 
 # bettercrt, cubes, inside-the-matrix, just-snow (laggy), underwater, galaxy, cineShader-Lava, gears-and-belts, starfield-colors
 
 # DO  NOT FORGET ctrl + shift + ,
 
+# Primary shaders
+
 custom-shader = ghostty-shaders/singularity.glsl
 # custom-shader = ghostty-shaders/synthwave.glsl
 # custom-shader = ghostty-shaders/ui-noise-halo.glsl
 # custom-shader = ghostty-shaders/cineShader-Lava.glsl
+# custom-shader = ghostty-shaders/gears-and-belts.glsl
+# custom-shader = ghostty-shaders/cyber-fuji.glsl
+# custom-shader = ghostty-shaders/iso-city.glsl
 
+# Secondary shaders
+
+# custom-shader = ghostty-shaders/bettercrt.glsl
+# custom-shader = ghostty-shaders/retro-terminal.glsl
+foreground = eebdef
 theme = carbonfox
 gtk-tabs-location = hidden
 # gtk-opengl-debug = true
